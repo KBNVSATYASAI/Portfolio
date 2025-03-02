@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Karna Bala Naga Venkata Satya Sai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav .nav-links a:hover {
+            color: #ff6f61;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #ff4a3d;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .about-content img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            width: 550px;
+            height: 600px;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill {
+            background-color: #f4f4f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill i {
+            font-size: 3rem;
+            color: #2575fc;
+        }
+
+        .skill h3 {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .project p {
+            font-size: 1rem;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            background-color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .certifications h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .certification {
+            background-color: #f4f4f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .certification:hover {
+            transform: translateY(-10px);
+        }
+
+        .certification img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .certification h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .certification p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .certification .btn {
+            background-color: #2575fc;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .certification .btn:hover {
+            background-color: #1a5bbf;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            color: #fff;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-links a:hover {
+            color: #ff6f61;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .certifications-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">My Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Hello, I'm <span>Karna Bala Naga Venkata Satya Sai💗</span></h1>
+            <p>A passionate B.Tech Computer Science student at KL University with expertise in Web Development, Devops and Cloud Technologies.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <!-- Replace the src attribute with the path to your photo -->
+                <img src="christmaspic.jpeg" alt="Karna Bala Naga Venkata Satya Sai">
+                <p>
+                    I am an undergraduate Computer Science student at KL University, currently maintaining a CGPA of 9.47. I have a strong foundation in Data Structures, Algorithms, Web Development, and DevOps, with hands-on experience in MERN Stack, Spring Boot, and AWS Cloud Technologies. I have worked on projects like an ERP Management System, an Online Loan Management System, and a CI/CD pipeline for full-stack applications on AWS. Additionally, I have mentored students in web development and problem-solving as a MERN Stack mentor and Java Lead in the Be One Community. I hold certifications in Red Hat EX-183, AWS Cloud Practitioner, and Salesforce AI Associate.                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <i class="fas fa-code"></i>
+                    <h3>Languages</h3>
+                    <p>C, Java, JavaScript, Python, SQL</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>MERN Stack, Spring Boot, RESTful APIs</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <h3>Databases</h3>
+                    <p>MongoDB, MySQL, PostgreSQL</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-cloud"></i>
+                    <h3>DevOps</h3>
+                    <p>Linux, Bash Scripting , CI/CD, Docker, Kubernetes, Terraform, Jenkins, AWS</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Cloud</h3>
+                    <p>AWS, DevOps tools, AI tools in AWS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="https://www.brightpearl.com/wp-content/uploads/2021/05/ERP-system-diagram-1024x512.png" alt="ERP Management System">
+                    <h3>ERP Management System (MERN Stack)</h3>
+                    <p>Developed a school management system with student/teacher management and marks tracking.</p>
+                </div>
+                <div class="project">
+                    <img src="https://softwaresuggest-cdn.s3.ap-southeast-1.amazonaws.com/pageimages/Loan-Management-Software.jpg" alt="Online Loan Management System">
+                    <h3>Online Loan Management System (Java Full Stack)</h3>
+                    <p>Created a full-stack web application for loan management, incorporating authentication and security.</p>
+                </div>
+                <div class="project">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*I9yxRUH1kJM0CS0YFNM0qA.png" alt="CI/CD Pipeline for Web Application">
+                    <h3>CI/CD Pipeline for Web Application (AWS DevOps)</h3>
+                    <p>Built a CI/CD pipeline for a Spring Boot & React application using Jenkins, Docker, and Kubernetes on AWS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification">
+                    <img src="https://media.licdn.com/dms/image/D4E12AQEUnaxEYGf6XA/article-cover_image-shrink_600_2000/0/1667471241585?e=2147483647&v=beta&t=zjYWbbCtTDEBM-dJ3jBL951pWKUghEFYliyymzmlBHE" alt="AWS Certified Cloud Practitioner">
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p>Certified in AWS Cloud fundamentals, including services, security, and architecture.</p>
+                    <a href="https://www.credly.com/badges/92c7f6e9-e119-4cb9-bc83-44cf939f691c/public_url" class="btn" target="_blank">View</a>
+                </div>
+                <div class="certification">
+                    <img src="https://media.licdn.com/dms/image/v2/D5610AQFj9UJgYMcpCg/image-shrink_1280/image-shrink_1280/0/1705115809111?e=2147483647&v=beta&t=aa9CrHR-wRPV8QkI5pBbt1QVMu1vJXl0qvIKJ8BqSKg" alt="Red Hat Certified Enterprise Application Developer">
+                    <h3>Red Hat Certified Enterprise Application Developer</h3>
+                    <p>Certified in developing enterprise applications using Red Hat technologies.</p>
+                    <a href="https://www.credly.com/badges/512e73aa-28e2-4e1a-b274-d924604eb3b0/linked_in?t=sl5bql" class="btn" target="_blank">View</a>
+                </div>
+                <div class="certification">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUE9msV5eV4_wBbk6qfXcAMlZMyIMlwx9u1w&s" alt="Salesforce Certified AI Associate">
+                    <h3>Salesforce Certified AI Associate</h3>
+                    <p>Certified in Salesforce AI tools and applications for business solutions.</p>
+                    <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=XBhLZjdX3aNEtRZH5NQad6pZRoxibRUDWT9IsjETAvLYCiXahRhgtwwBM/STwrHn" class="btn" target="_blank">View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Karna Bala Naga Venkata Satya Sai. All rights reserved.</p>
+            <div class="social-links">
+                <a href="mailto:2200030313cseh@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/KBNVSATYASAI"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/karna-bala-naga-venkata-satya-sai-401a67278"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/_mr_possible__/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
